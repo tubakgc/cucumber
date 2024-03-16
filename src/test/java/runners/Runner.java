@@ -17,6 +17,5 @@ import org.junit.runner.RunWith;
         dryRun = false
 )
 public class Runner {
-//git için ekleme yapıldı
-    //ikinci kez git için ekleme yapıldı
+
 }
