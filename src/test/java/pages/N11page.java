@@ -5,18 +5,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-import javax.xml.xpath.XPath;
-
 public class N11page {
 
     public N11page() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    //@FindBy(xpath= "//div[@data-name=\"Reject Button\"]")
+    @FindBy(xpath = "//div[@data-name=\"Reject Button\" and contains(text(),'Tümünü Reddet')]")
+    public WebElement btnCookie;
     @FindBy(linkText = "Giriş Yap")
     public WebElement btnGirisYap;
 
-    @FindBy(xpath = "//input[@id=\'email']")
+    @FindBy(xpath = "//input[@id=\"email\"]")
     public WebElement btnemail;
 
     @FindBy(xpath = "//input[@id=\"password\"]")
@@ -40,7 +41,8 @@ public class N11page {
 
     @FindBy(xpath = "(//div[@class='rate customRadio  '])[2]")
     public WebElement stars;
-    @FindBy(xpath = "(//div[@class=\"pro\"])[4]")
+    //@FindBy(xpath = "(//div[@class=\"pro\"])[5]")
+    @FindBy(xpath = "//div[@data-position=5]")
     public WebElement earphones;
 
     @FindBy(className = "product-add-cart")
@@ -52,8 +54,8 @@ public class N11page {
     @FindBy(id = "js-goToPaymentBtn")
     public WebElement moneyPay;
 
-   // @FindBy(xpath = "//span[@title=\"Sil\"]")
-   @FindBy(xpath = "//span[@title='Sil' and contains(text(),'Sil')]")
+    // @FindBy(xpath = "//span[@title=\"Sil\"]")
+    @FindBy(xpath = "//span[@title='Sil' and contains(text(),'Sil')]")
     public WebElement delete;
 
     @FindBy(xpath = "//span[@id=\"deleteBtnDFLB\"]")
@@ -65,6 +67,7 @@ public class N11page {
     public WebElement users;
     @FindBy(xpath = "//a[@class=\"logoutBtn\"]")
     public WebElement theEnd;
-
+    @FindBy(xpath = "//div[@id='myLocation-close-info']")
+    public WebElement adressOk;
 
 }
